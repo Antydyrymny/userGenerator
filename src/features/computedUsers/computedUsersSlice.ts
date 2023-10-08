@@ -43,13 +43,12 @@ const computedUsersSlice = createSlice({
         },
         setErrorFrequency: (state, action: PayloadAction<number>) => {
             state.errorFrequency = action.payload;
-            if (action.payload !== 0)
-                state.usersWithErrors = addErrors(
-                    state.cachedUsers,
-                    state.locale,
-                    action.payload,
-                    state.seed
-                );
+            state.usersWithErrors = addErrors(
+                state.cachedUsers,
+                state.locale,
+                action.payload,
+                state.seed
+            );
         },
     },
     extraReducers: (builder) => {
