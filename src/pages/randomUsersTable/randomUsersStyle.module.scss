@@ -1,0 +1,32 @@
+@use '../../styles/index.scss' as *;
+
+.wrapper {
+    padding-top: 3rem;
+}
+
+.navbar {
+    @include flexbox(row, center, start);
+    gap: 2.5rem;
+    padding-top: 1.5rem;
+
+    form {
+        min-width: 10rem;
+    }
+}
+
+.table {
+    margin-top: 7rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.csv {
+    position: fixed;
+    right: 3rem;
+}
+
+@media (max-width: 1400px) {
+    .csv {
+        position: static;
+    }
+}
